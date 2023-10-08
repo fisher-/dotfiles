@@ -1,0 +1,26 @@
+[user]
+    name = USERNAME
+    email = EMAIL
+[color]
+    ui = auto
+[color "branch"]
+    current = green reverse
+    local = magenta
+    remote = green
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+[push]
+    default = matching
+[alias]
+    ru = remote update --prune
+    br = branch -vv
+    st = status
+    rh = reset --hard HEAD~1
+    llog = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=iso
+    flog = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s%n' --graph --name-status
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[core]
+    excludesfile = ~/.gitignore
+
